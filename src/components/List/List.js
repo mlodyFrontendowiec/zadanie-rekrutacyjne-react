@@ -17,8 +17,22 @@ const List = ({ searchValue }) => {
     ));
   }
 
-  return <StyledSection>{listItems}</StyledSection>;
+  const ListItemsComopnent =
+    listItems.length === 0 ? (
+      <StyledParagraph>Not Found </StyledParagraph>
+    ) : (
+      listItems
+    );
+
+  return <StyledSection>{ListItemsComopnent}</StyledSection>;
 };
+
+const StyledParagraph = styled.p`
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  margin: 10px auto;
+`;
 
 const StyledSection = styled.section`
   width: 80%;
