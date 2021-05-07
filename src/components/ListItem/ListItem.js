@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import StyledListItem from "../StyledComponents/StyledListItem";
 
 const ListItem = ({

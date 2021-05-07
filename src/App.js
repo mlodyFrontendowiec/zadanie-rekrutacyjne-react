@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Loader from "react-loader-spinner";
 import { useSelector, useDispatch } from "react-redux";
 import ButtonLoadMore from "./components/ButtonLoadMore/ButtonLoadMore";
 import List from "./components/List/List";
