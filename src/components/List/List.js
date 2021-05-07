@@ -1,12 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import styled from "styled-components";
+import { StyledParagraph, StyledSection } from "../StyledComponents/StyledList";
 import ListItem from "../ListItem/ListItem";
 
 const List = ({ searchValue }) => {
   const { characters } = useSelector((state) => state.characters);
   let listItems = [];
-  console.log(searchValue);
   if (searchValue) {
     listItems = characters
       .filter((character) => character.name.toLowerCase().includes(searchValue))
@@ -27,18 +26,4 @@ const List = ({ searchValue }) => {
   return <StyledSection>{ListItemsComopnent}</StyledSection>;
 };
 
-const StyledParagraph = styled.p`
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  margin: 10px auto;
-`;
-
-const StyledSection = styled.section`
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`;
 export default List;
