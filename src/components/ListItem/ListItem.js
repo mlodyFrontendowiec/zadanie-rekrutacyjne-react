@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const ListItem = ({
   name,
@@ -11,7 +12,7 @@ const ListItem = ({
   gender,
 }) => {
   return (
-    <div>
+    <StyledListItem>
       <h2>{name}</h2>
       <p>Height: {height} cm</p>
       <p>Mass: {mass} kg</p>
@@ -20,8 +21,19 @@ const ListItem = ({
       <p>Hair Color: {hair_color}</p>
       <p>Skin Color: {skin_color}</p>
       <p>Gender: {gender}</p>
-    </div>
+    </StyledListItem>
   );
 };
 
+const StyledListItem = styled.div`
+  list-style: none;
+  padding: 12px 10px;
+  border: 2px solid yellow;
+  margin: 10px 0;
+  color: #bbb;
+  width: 30%;
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+`;
 export default ListItem;
